@@ -45,14 +45,16 @@ chpwd() ls
 # For help create an issue at github.com/parth/dotfiles
 
 autoload -U compinit
-
 plugins=(
 	docker
+	kubectl
 )
 
 for plugin ($plugins); do
     fpath=(~/dotfiles/zsh/plugins/oh-my-zsh/plugins/$plugin $fpath)
 done
+
+source ~/dotfiles/zsh/plugins/oh-my-zsh/plugins/kubectl/kubectl.plugin.zsh
 
 compinit
 
