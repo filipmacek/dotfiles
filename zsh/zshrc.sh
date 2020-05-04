@@ -1,6 +1,8 @@
 # Vars
 	HISTFILE=~/.zsh_history
 	SAVEHIST=1000 
+	ZSH=~/.zsh
+	ZSH_CACHE_DIR=~/.zsh/cache
 	setopt inc_append_history # To save every command before it is executed 
 	setopt share_history # setopt inc_append_history
 
@@ -45,22 +47,17 @@ chpwd() ls
 # For help create an issue at github.com/parth/dotfiles
 
 autoload -U compinit
-plugins=(
-	docker
-	kubectl
-)
-
+plugins=(docker	kubectl)
 for plugin ($plugins); do
-    fpath=(~/dotfiles/zsh/plugins/oh-my-zsh/plugins/$plugin $fpath)
+    fpath=(~/dotfiles/zsh/plugins/ohmyzsh/plugins/$plugin $fpath)
 done
-
-source ~/dotfiles/zsh/plugins/oh-my-zsh/plugins/kubectl/kubectl.plugin.zsh
+source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/kubectl/kubectl.plugin.zsh
 
 compinit
 
-source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
-source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh
-source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/completion.zsh
+source ~/dotfiles/zsh/plugins/ohmyzsh/lib/history.zsh
+source ~/dotfiles/zsh/plugins/ohmyzsh/lib/key-bindings.zsh
+source ~/dotfiles/zsh/plugins/ohmyzsh/lib/completion.zsh
 source ~/dotfiles/zsh/plugins/vi-mode.plugin.zsh
 source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
