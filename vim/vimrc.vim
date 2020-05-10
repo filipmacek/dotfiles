@@ -4,6 +4,14 @@ call plug#begin('~/dotfiles/vim/plugged')
 "For file tree structure
 Plug 'preservim/nerdtree'
 
+"Airline plugin
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+"Comment plug
+Plug 'tpope/vim-commentary'
+
+
 "Colorschemes and airlines
 Plug 'morhetz/gruvbox'
 
