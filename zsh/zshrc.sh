@@ -10,13 +10,15 @@
 
 # Aliases
 	alias v="vim -p"
-	mkdir -p /tmp/log
-	
-	# This is currently causing problems (fails when you run it anywhere that isn't a git project's root directory)
-	# alias vs="v `git status --porcelain | sed -ne 's/^ M //p'`"
-
+	alias ll="ls -la"
+    alias r="ranger"
 # Settings
 	export VISUAL=vim
+
+
+# Functional aliases
+alias fpw="fzf --preview 'bat --style=numbers --color=always {} | head -500'"
+
 
 source ~/dotfiles/zsh/plugins/fixls.zsh
 
@@ -46,14 +48,12 @@ chpwd() ls
 # Edit the array below, or relocate it to ~/.zshrc before anything is sourced
 # For help create an issue at github.com/parth/dotfiles
 
-autoload -U compinit
-plugins=(docker	kubectl git)
-for plugin ($plugins); do
-    fpath=(~/dotfiles/zsh/plugins/ohmyzsh/plugins/$plugin $fpath)
-done
+
+# Ohmyzsh plugins that I need
+# Kubectl
 source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/kubectl/kubectl.plugin.zsh
 
-compinit
+
 
 source ~/dotfiles/zsh/plugins/ohmyzsh/lib/history.zsh
 source ~/dotfiles/zsh/plugins/ohmyzsh/lib/key-bindings.zsh
@@ -77,5 +77,8 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
 	bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 fi
 
+
 source ~/dotfiles/zsh/prompt.sh
-export PATH=$PATH:$HOME/dotfiles/utils
+
+# Fzf
+[ -f ./.fzf.zsh ] && source ./.fzf.zsh
