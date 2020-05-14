@@ -53,11 +53,15 @@ noremap <C-h> <C-w>h
 noremap <C-k> <C-w>k
 noremap <C-j> <C-w>j
 
+" Set mouse scrooling for vim instead of tmux
+set mouse=a
+
 
 "Visual select line
 nnoremap vv 0v$
 
-
+" Insert newline without entering insert mode
+nmap <CR> o<Esc>
 "File and window management
 inoremap <leader>w <Esc>:w<CR>
 nnoremap <leader>w :w<CR>

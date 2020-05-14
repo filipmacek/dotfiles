@@ -1,6 +1,7 @@
 # Vars
 	HISTFILE=~/.zsh_history
 	SAVEHIST=1000 
+	EDITOR=vim
 	ZSH=~/.zsh
 	ZSH_CACHE_DIR=~/.zsh/cache
 	setopt inc_append_history # To save every command before it is executed 
@@ -53,7 +54,8 @@ chpwd() ls
 # Kubectl
 source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/kubectl/kubectl.plugin.zsh
 
-
+# web-search
+source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/web-search/web-search.plugin.zsh
 
 source ~/dotfiles/zsh/plugins/ohmyzsh/lib/history.zsh
 source ~/dotfiles/zsh/plugins/ohmyzsh/lib/key-bindings.zsh
@@ -81,4 +83,5 @@ fi
 source ~/dotfiles/zsh/prompt.sh
 
 # Fzf
-[ -f ./.fzf.zsh ] && source ./.fzf.zsh
+echo ispod
+[ -f ~/dotfiles/zsh/.fzf.zsh ] && source ~/dotfiles/zsh/.fzf.zsh

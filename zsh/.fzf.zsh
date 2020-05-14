@@ -1,5 +1,6 @@
 # Setup fzf
-# ---------
+#
+#---------
 if [[ ! "$PATH" == */home/filip/dotfiles/zsh/plugins/fzf/bin* ]]; then
   export PATH="${PATH:+${PATH}:}/home/filip/dotfiles/zsh/plugins/fzf/bin"
 fi
