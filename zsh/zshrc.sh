@@ -82,6 +82,10 @@ fi
 
 source ~/dotfiles/zsh/prompt.sh
 
+# PATH
+# GO bin files
+export PATH=$PATH:/usr/local/go/bin
+
+
 # Fzf
-echo ispod
 [ -f ~/dotfiles/zsh/.fzf.zsh ] && source ~/dotfiles/zsh/.fzf.zsh
