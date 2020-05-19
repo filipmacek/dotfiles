@@ -44,8 +44,18 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'jiangmiao/auto-pairs'
-call plug#end()
 
+Plug 'alvan/vim-closetag'
+
+Plug 'MattesGroeger/vim-bookmarks'
+
+
+
+Plug 'Vimjas/vim-python-pep8-indent'
+
+Plug 'tpope/vim-surround'
+
+Plug 'dense-analysis/ale'
 
 " General Vim settings
 	set encoding=UTF-8
@@ -57,6 +67,7 @@ call plug#end()
 	set dir=/tmp/
 	set relativenumber 
 	set number
+
 
 "Coloscheme
 colorscheme gruvbox
@@ -108,7 +119,7 @@ nmap <F8> :TagbarToggle<CR>
 " Fzf shortcuts
 nnoremap <C-t> :Files<cr>
 nnoremap <C-f> :Ag<cr>
-
+nnoremap <C-b> :Buffers<cr>
 
 
 let g:coc_node_path='/usr/bin/node'
@@ -121,7 +132,13 @@ let g:coc_global_extensions = [
 
 let g:loaded_youcompleteme=1
 
+" AUTO PAIRS SHORTCUTS(alt key not working)
+let g:AutoPairsShortcutFastWrap = '<C-e>'
+let g:AutoPairsShortcutJump='<F2>'
 
+
+
+" ======= Coc settings/ keymaps ==========
 
 
 " TextEdit might fail if hidden is not set.
@@ -268,3 +285,17 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+" mapped F5 to execute python program in terminal
+map <F5> :!clear;python3 %<CR>
+imap <F5> :!clear;python3 %<CR>
+
+map <C-V> :sp ~/dotfiles/vim/vimrc.vim<CR>
+
+
+" ALE settings
+let g:ale_lint_on_text_changed='never'
+let g:ale_lint_on_enter=0
+
+let g:ale_linters={'python':['flake8']}
+let g:ale_fixers={'python':['autopep8']}
