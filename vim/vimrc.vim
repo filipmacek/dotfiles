@@ -57,6 +57,8 @@ Plug 'tpope/vim-surround'
 
 Plug 'dense-analysis/ale'
 
+call plug#end()
+
 " General Vim settings
 	set encoding=UTF-8
 	syntax on
