@@ -19,6 +19,9 @@
 	alias v="vim -p"
 	alias ll="ls -la"
     alias r="ranger"
+	alias l="linode-cli"
+
+
 # Settings
 	export VISUAL=vim
 
