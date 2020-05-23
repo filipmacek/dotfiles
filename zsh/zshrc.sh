@@ -4,6 +4,12 @@
 	EDITOR=vim
 	ZSH=~/.zsh
 	ZSH_CACHE_DIR=~/.zsh/cache
+	export KUBECONFIG=~/.kube/configs/kubeconfig.yaml:~/.kube/config
+
+
+
+
+
 	setopt inc_append_history # To save every command before it is executed 
 	setopt share_history # setopt inc_append_history
 
@@ -54,6 +60,9 @@ chpwd() ls
 # Kubectl
 source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/kubectl/kubectl.plugin.zsh
 
+# Minikube
+source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/minikube/minikube.plugin.zsh
+
 # web-search
 source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/web-search/web-search.plugin.zsh
 
@@ -89,3 +98,9 @@ export PATH=$PATH:/usr/local/go/bin
 
 # Fzf
 [ -f ~/dotfiles/zsh/.fzf.zsh ] && source ~/dotfiles/zsh/.fzf.zsh
+
+
+# Script for sourcing aliases in folders
+for file in ~/dotfiles/*/aliases.sh; do
+	source "$file"
+done

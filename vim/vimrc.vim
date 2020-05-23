@@ -46,17 +46,15 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'alvan/vim-closetag'
-
-Plug 'MattesGroeger/vim-bookmarks'
-
-
-
 Plug 'Vimjas/vim-python-pep8-indent'
 
 Plug 'tpope/vim-surround'
 
 Plug 'dense-analysis/ale'
 
+Plug 'airblade/vim-gitgutter'
+
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " General Vim settings
@@ -134,9 +132,6 @@ let g:coc_global_extensions = [
 
 let g:loaded_youcompleteme=1
 
-" AUTO PAIRS SHORTCUTS(alt key not working)
-let g:AutoPairsShortcutFastWrap = '<C-e>'
-let g:AutoPairsShortcutJump='<F2>'
 
 
 
@@ -301,3 +296,6 @@ let g:ale_lint_on_enter=0
 
 let g:ale_linters={'python':['flake8']}
 let g:ale_fixers={'python':['autopep8']}
+
+" Vim fugitive
+nmap <leader>gs :G<CR>
