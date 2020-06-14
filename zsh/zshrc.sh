@@ -15,12 +15,11 @@
 
 	git config --global push.default current
 
-# Aliases
-	alias v="vim -p"
-	alias ll="ls -la"
-    alias r="ranger"
-	alias l="linode-cli"
 
+
+# alias md-to-pdf="pandoc --variable urlcolor=cyan kubecluster.md --pdf-engine wkhtmltopdf -o"
+# Load functions
+source $HOME/dotfiles/zsh/functions.sh
 
 # Settings
 	export VISUAL=vim
@@ -31,6 +30,13 @@ alias fpw="fzf --preview 'bat --style=numbers --color=always {} | head -500'"
 
 
 source ~/dotfiles/zsh/plugins/fixls.zsh
+
+
+
+
+fpath=(~/dotfiles/zsh/autocompletions $fpath)
+
+
 
 #Functions
 	# Loop a command and show the output in vim
@@ -52,11 +58,9 @@ chpwd() ls
 # For vim mappings: 
 	stty -ixon
 
-# Completions
-# These are all the plugin options available: https://github.com/robbyrussell/oh-my-zsh/tree/291e96dcd034750fbe7473482508c08833b168e3/plugins
-#
-# Edit the array below, or relocate it to ~/.zshrc before anything is sourced
-# For help create an issue at github.com/parth/dotfiles
+
+# Load functions
+source ~/dotfiles/zsh/functions.sh
 
 
 # Ohmyzsh plugins that I need
@@ -68,6 +72,9 @@ source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/minikube/minikube.plugin.zsh
 
 # web-search
 source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/web-search/web-search.plugin.zsh
+
+# zsh-z
+source ~/dotfiles/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 
 source ~/dotfiles/zsh/plugins/ohmyzsh/lib/history.zsh
 source ~/dotfiles/zsh/plugins/ohmyzsh/lib/key-bindings.zsh
@@ -98,9 +105,17 @@ source ~/dotfiles/zsh/prompt.sh
 # GO bin files
 export PATH=$PATH:/usr/local/go/bin
 
+# kubectl krew plugin manager
+export PATH=${PATH}:${HOME}/.krew/bin
+
+# Utils
+export PATH=$PATH:~/dotfiles/utils
 
 # Fzf
 [ -f ~/dotfiles/zsh/.fzf.zsh ] && source ~/dotfiles/zsh/.fzf.zsh
+
+
+autoload -U compinit && compinit
 
 
 # Script for sourcing aliases in folders

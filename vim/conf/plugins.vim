@@ -1,4 +1,6 @@
 call plug#begin('~/dotfiles/vim/plugged')
+
+" Plug 'honza/vim-snippets'
 "For file tree structure
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -27,11 +29,13 @@ Plug 'junegunn/fzf.vim'
 
 
 Plug 'sheerun/vim-polyglot'
+Plug 'drmikehenry/vim-fixkey' 
 
-Plug 'ycm-core/YouCompleteMe'
-
+Plug 'tpope/vim-eunuch'
+"Coc and metals
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'scalameta/coc-metals', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
@@ -53,5 +57,15 @@ Plug 'linluk/vim-websearch'
 
 Plug 'derekwyatt/vim-scala'
 
-Plug 'liuchengxu/vim-which-key'
+Plug 'terryma/vim-multiple-cursors'
+
+
+" Plug 'ervandew/supertab'
+Plug 'SirVer/ultisnips'
+Plug 'Valloric/YouCompleteMe',{'do':'./install.py'}
+
+Plug 'simeji/winresizer'
+
+
 call plug#end()
+
