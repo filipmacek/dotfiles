@@ -3,3 +3,23 @@ if (${1:uvjet}) {
 	${2:code}
 }
 endsnippet
+
+snippet sh "Sh template" b
+#!/bin/env sh
+endsnippet
+
+snippet grn "Green" i
+${grn}
+endsnippet
+
+snippet clr "exit" i
+${clr}
+endsnippet
+
+snippet echo_color "Echo command with colors" b
+echo "\$\{grn\}${1}\$\{clr\}" 
+endsnippet
+
+snippet rmt "Remote command" b
+remote_cmd "${1:}"
+endsnippet

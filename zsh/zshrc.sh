@@ -5,6 +5,8 @@
 	ZSH=~/.zsh
 	ZSH_CACHE_DIR=~/.zsh/cache
 	export KUBECONFIG=~/.kube/configs/kubeconfig.yaml:~/.kube/config
+	export hosts=~/Desktop/master-thesis/pi-cluster/hosts
+
 
 
 
@@ -64,6 +66,12 @@ source ~/dotfiles/zsh/functions.sh
 
 
 # Ohmyzsh plugins that I need
+# Task warrior
+source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/taskwarrior/taskwarrior.plugin.zsh
+
+# Time warrior
+source ~/dotfiles/zsh/plugins/timewarrior/timewarrior.plugin.zsh
+
 # Kubectl
 source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/kubectl/kubectl.plugin.zsh
 
@@ -120,5 +128,10 @@ autoload -U compinit && compinit
 
 # Script for sourcing aliases in folders
 for file in ~/dotfiles/*/aliases.sh; do
+	source "$file"
+done
+
+# Script for sourcing utils in folders
+for file in ~/dotfiles/*/utils.sh; do
 	source "$file"
 done
