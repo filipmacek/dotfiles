@@ -1,0 +1,12 @@
+#!/bin/bash
+
+for file in $(find . -type f -print); do
+	if [ $file == "all_text" ]; then
+		continue
+	fi
+	printf "\n\n========================== $file ========================= \n\n" >> all_text
+
+	awk 'BEGIN {cnt=0}  /^$/{++cnt} { if (cnt>=1) print  }' $file >> all_text
+done
+
+

@@ -43,7 +43,10 @@ set number
 " Command line height
 set ch=2
 
-" Timeout between changing mods,and between mappings
+" Highlight search matches
+set hlsearch
+
+" " Timeout between changing mods,and between mappings
 set timeoutlen=2000
 set ttimeoutlen=10
 
@@ -82,12 +85,35 @@ vnoremap SE :WebSearchVisual<CR>
 
 " mapped F5 to execute python program in terminal
 
-" ALE settings
-let g:ale_lint_on_text_changed='never'
-let g:ale_lint_on_enter=0
+"==========================================================
+"		ALE
+"=========================================================
 
-let g:ale_linters={'python':['flake8']}
-let g:ale_fixers={'python':['autopep8']}
+
+let g:ale_linters = {
+\   'python': ['flake8', 'pylint'],
+\   'javascript': ['eslint'],
+\   'vue': ['eslint']
+\}
+let g:ale_fixers = {
+  \    'javascript': ['eslint'],
+  \    'typescript': ['prettier', 'tslint'],
+  \    'vue': ['eslint'],
+  \    'scss': ['prettier'],
+  \    'html': ['prettier'],
+  \    'reason': ['refmt']
+\}
+let g:ale_fix_on_save = 1
+
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+nmap ]a :ALENextWrap<CR>
+nmap [a :ALEPreviousWrap<CR>
+nmap ]A :ALELast
+nmap [A :ALEFirst]
+
+
+
 
 let g:UltiSnipsSnippetsDir = '~/dotfiles/vim/UltiSnips'
 let g:UltiSnipsSnippetDirectories = ['~/dotfiles/vim/UltiSnips']
@@ -102,3 +128,20 @@ let g:vimwiki_global_ext=0
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 
+"==========================================================
+"		Emmet vim
+"=========================================================
+let g:user_emmet_leader_key=','
+let g:user_emmet_settings = {'javascript.jsx':{'extends':'jsx'}}
+"==========================================================
+"		prettier
+"=========================================================
+" FORMATTERS
+au FileType javascript setlocal formatprg=prettier
+au FileType javascript.jsx setlocal formatprg=prettier
+au FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+au FileType html setlocal formatprg=js-beautify\ --type\ html
+au FileType scss setlocal formatprg=prettier\ --parser\ css
+au FileType css setlocal formatprg=prettier\ --parser\ css
+let g:prettier#autoformat=1
+let g:prettier#autoformat_require_pragma = 0

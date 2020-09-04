@@ -1,6 +1,5 @@
 let mapleader=","
 " source ~/dotfiles/vim/autoload/resizer.vim
-map <leader>b :call resizer#Meow()<CR>
 map <leader>ex :Explore<CR>
 
 
@@ -67,8 +66,12 @@ map <M-V> :edit ~/dotfiles/vim/vimrc.vim<CR>
 
 noremap <leader>np :NERDTreeToggle expand('%:h')
 
+"==========================================================
+"		Buffer navigation a deletion
+"=========================================================
 noremap <leader>l :bn<CR>
-noremap <leader>h :bp<CR>
+noremap <leader>k :bp<CR>
+noremap <leader>m :bdelete<CR>
 
 noremap <leader>tb :tabnew %<CR>
 
@@ -109,3 +112,5 @@ nmap <leader>gx :GrammarousReset<CR>
 let g:comfortable_motion_no_default_key_mappings = 1
 nnoremap <silent> <C-d> :call comfortable_motion#flick(100)<CR>
 nnoremap <silent> <C-u> :call comfortable_motion#flick(-100)<CR>
+
+

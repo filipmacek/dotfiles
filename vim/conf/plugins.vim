@@ -39,6 +39,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'drmikehenry/vim-fixkey' 
 
+Plug 'hashivim/vim-terraform'
+
 Plug 'tpope/vim-eunuch'
 "Coc and metals
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -76,6 +78,19 @@ Plug 'Valloric/YouCompleteMe',{'do':'./install.py'}
 
 Plug 'simeji/winresizer'
 
+
+
+
+" React - JavaScript
+"  1)Syntax Highlighting
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+" 2) JSON support
+Plug 'elzr/vim-json'
+" 3) Emmet support
+Plug 'mattn/emmet-vim'
+" 4) Prettier
+Plug 'prettier/vim-prettier', {'do': 'yarn install','for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json','graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 call plug#end()
 

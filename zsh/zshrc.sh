@@ -4,7 +4,7 @@
 	EDITOR=vim
 	ZSH=~/.zsh
 	ZSH_CACHE_DIR=~/.zsh/cache
-	export KUBECONFIG=~/.kube/configs/kubeconfig.yaml:~/.kube/config
+	export KUBECONFIG=~/.kube/configs/kubeconfig.yaml:~/.kube/config:~/.kube/configs/pi-cluster-config
 	export hosts=~/Desktop/master-thesis/pi-cluster/hosts
 
 
@@ -67,10 +67,18 @@ source ~/dotfiles/zsh/functions.sh
 
 # Ohmyzsh plugins that I need
 # Task warrior
-source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/taskwarrior/taskwarrior.plugin.zsh
+# source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/taskwarrior/taskwarrior.plugin.zsh
 
-# Time warrior
-source ~/dotfiles/zsh/plugins/timewarrior/timewarrior.plugin.zsh
+# # Time warrior
+# source ~/dotfiles/zsh/plugins/timewarrior/timewarrior.plugin.zsh
+
+
+# Aws
+source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/aws/aws.plugin.zsh
+
+# Terraform
+source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/terraform/terraform.plugin.zsh
+
 
 # Kubectl
 source ~/dotfiles/zsh/plugins/ohmyzsh/plugins/kubectl/kubectl.plugin.zsh
@@ -118,6 +126,9 @@ export PATH=${PATH}:${HOME}/.krew/bin
 
 # Utils
 export PATH=$PATH:~/dotfiles/utils
+
+# kotlin-native
+export PATH=$PATH:/opt/kotlin-native-linux-1.3.72/bin
 
 # Fzf
 [ -f ~/dotfiles/zsh/.fzf.zsh ] && source ~/dotfiles/zsh/.fzf.zsh
