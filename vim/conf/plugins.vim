@@ -10,8 +10,8 @@ Plug 'mattn/calendar-vim'
 
 Plug 'yuttie/comfortable-motion.vim'
 
-Plug 'blindFS/vim-taskwarrior'
-Plug 'tbabej/taskwiki'
+" Plug 'blindFS/vim-taskwarrior'
+" Plug 'tbabej/taskwiki'
 
 Plug 'joshdick/onedark.vim'
 
@@ -79,18 +79,20 @@ Plug 'Valloric/YouCompleteMe',{'do':'./install.py'}
 Plug 'simeji/winresizer'
 
 
-
+Plug 'moll/vim-bbye'
 
 " React - JavaScript
 "  1)Syntax Highlighting
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+" Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
 " 2) JSON support
 Plug 'elzr/vim-json'
 " 3) Emmet support
 Plug 'mattn/emmet-vim'
 " 4) Prettier
-Plug 'prettier/vim-prettier', {'do': 'yarn install','for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json','graphql', 'markdown', 'vue', 'yaml', 'html'] }
+" Plug 'prettier/vim-prettier', {'do': 'yarn install','for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json','graphql', 'markdown', 'vue', 'yaml', 'html'] }
+
+" Plug 'jelera/vim-javascript-syntax'
 
 call plug#end()
 

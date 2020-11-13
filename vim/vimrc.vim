@@ -1,6 +1,6 @@
 "Global variables
-
 let g:polyglot_disabled=['scala']
+imap jj <Esc>
 
 let g:base_dir = '~/dotfiles/vim/'
 let g:config_path = base_dir.'conf/'
@@ -38,7 +38,7 @@ set shiftwidth=4
 set dir=/tmp/
 set relativenumber 
 set number
-
+set autoread
 
 " Command line height
 set ch=2
@@ -92,11 +92,11 @@ vnoremap SE :WebSearchVisual<CR>
 
 let g:ale_linters = {
 \   'python': ['flake8', 'pylint'],
-\   'javascript': ['eslint'],
+\   'javascript': ['flow-language-server'],
 \   'vue': ['eslint']
 \}
 let g:ale_fixers = {
-  \    'javascript': ['eslint'],
+  \    'javascript': ['prettier'],
   \    'typescript': ['prettier', 'tslint'],
   \    'vue': ['eslint'],
   \    'scss': ['prettier'],
@@ -109,8 +109,8 @@ let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
 nmap ]a :ALENextWrap<CR>
 nmap [a :ALEPreviousWrap<CR>
-nmap ]A :ALELast
-nmap [A :ALEFirst]
+nmap ]A :ALELast<CR>
+nmap [A :ALEFirst]<CR>
 
 
 

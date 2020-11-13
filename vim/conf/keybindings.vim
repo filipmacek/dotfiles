@@ -71,7 +71,7 @@ noremap <leader>np :NERDTreeToggle expand('%:h')
 "=========================================================
 noremap <leader>l :bn<CR>
 noremap <leader>k :bp<CR>
-noremap <leader>m :bdelete<CR>
+noremap <leader>m :Bdelete<CR>
 
 noremap <leader>tb :tabnew %<CR>
 
