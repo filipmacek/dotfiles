@@ -1,0 +1,90 @@
+<application>
+  <component name="NodeJsLocalInterpreters">
+    <local-interpreter path="/bin/node" />
+    <local-interpreter path="/usr/bin/node" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="BYTE_CODE_TOOL_WINDOW" value="true" />
+    <property name="BuildView.Splitter.Proportion" value="0.2786238" />
+    <property name="Endpoints_Group[0]" value="0.11286682" />
+    <property name="Endpoints_Group[1]" value="0.12730744" />
+    <property name="Endpoints_Group[2]" value="0.1459854" />
+    <property name="ExpandBeforeRunStepsPanel" value="true" />
+    <property name="ExpandRunDashboardTypesPanel" value="false" />
+    <property name="FileColorsForTabsEnabled" value="true" />
+    <property name="FileTemplates.SelectedTemplate" value="HTML File" />
+    <property name="FindSplitterProportion" value="0.0" />
+    <property name="FrameworksFinderRecursivePanel[0]" value="0.11286682" />
+    <property name="FrameworksFinderRecursivePanel[1]" value="0.12730744" />
+    <property name="FrameworksFinderRecursivePanel[2]" value="0.1459854" />
+    <property name="InstalledPluginsSearchHistory" value="live template&#10;live templa&#10;live temp&#10;live te&#10;live" />
+    <property name="KEYMAP" value="vertic&#10;splitte&#10;splitter&#10;SHOW CON&#10;path" />
+    <property name="MarketplacePluginsSearchHistory" value="sublime&#10;sublimer&#10;sub&#10;su&#10;scala" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="true" />
+    <property name="PluginConfigurable.selectionTab" value="1" />
+    <property name="ProjectStructure.SecondLevelElements" value="0.3908046" />
+    <property name="RunConfigurable.dividerProportion" value="0.32003796" />
+    <property name="SHELLCHECK.PATH" value="I do mind" />
+    <property name="SHFMT.PATH" value="$APPLICATION_PLUGINS_DIR$/Shell Script/shfmt" />
+    <property name="Scala.Splitter.Proportion" value="0.3998872" />
+    <property name="ScalaSupport.hideIgnoredTests" value="false" />
+    <property name="ScalaSupport.hidePassedTests" value="false" />
+    <property name="ScalaSupport.sortTestsAlphabetically" value="false" />
+    <property name="ScalaSupport.sortTestsByDuration" value="false" />
+    <property name="SettingsSearchHistory" value="live template&#10;swagger&#10;keymap&#10;keym&#10;liv" />
+    <property name="ShowDocumentationInToolWindow" value="false" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="UITheme.relaunch" value="true" />
+    <property name="appcds.runOnSecondStart" value="IU-202.7660.26-56bff2fd0b30df360e21d3997e59df81440320d0098ea19911a14c26cdc5f34b" />
+    <property name="build.toolwindow.Build Output.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
+    <property name="build.toolwindow.Sync.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
+    <property name="build.toolwindow.show.warnings.selection.state" value="false" />
+    <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.0" value="300" />
+    <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.1" value="800" />
+    <property name="com.intellij.openapi.roots.ui.configuration.TabbedModuleEditor.selectedEditor" value="Sources" />
+    <property name="debugger.smart.chooser.counter" value="3" />
+    <property name="decompiler.legal.notice.accepted" value="true" />
+    <property name="defaultJdkConfigured" value="true" />
+    <property name="es6.show.auto.import" value="true" />
+    <property name="evlsprt3.202" value="19" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/Documents/constellation&#10;/home/filip/Documents/fs2&#10;/home/filip/Desktop/air/eagle/.scalafmt.conf&#10;/home/filip/Desktop/air/eagle/coverage&#10;/home/filip/Desktop/air/eagle/docker/docker-compose.yaml&#10;/home/filip/Desktop/air/eagle/it-tests/venv/bin/python3&#10;/home/filip/Desktop/air&#10;/home/filip/Desktop/air/eagle" />
+    <property name="file.gist.reindex.count" value="993" />
+    <property name="fileTypeChangedCounter" value="10" />
+    <property name="ide.memory.adjusted" value="true" />
+    <property name="ide.self.update.started.for.build" value="IU-202.7319.50" />
+    <property name="ideavim.statistics.timestamp" value="1605221379371" />
+    <property name="installed.kotlin.plugin.version" value="1.4.10-release-IJ2020.2-1" />
+    <property name="js.field.names.completion" value="false" />
+    <property name="js.opt.chain.completion" value="true" />
+    <property name="js.overrides.completion" value="true" />
+    <property name="js.var.names.completion.kind" value="NAMES_ONLY" />
+    <property name="kotlin.plugin.releaseDate" value="1.4.10-release-IJ2020.2-1:2020-09-10" />
+    <property name="lastSeenTip" value="neue-RecentSearch.html" />
+    <property name="lastTimeTipsWereShown" value="1605171202037" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/air/eagle/it-tests/venv/bin/python3" />
+    <property name="org.intellij.plugins.hcl.LAST_UPDATE" value="1605017756497" />
+    <property name="org.intellij.plugins.hcl.LAST_VERSION" value="0.7.10" />
+    <property name="packagesearch.endpoint.url.fulltext" value="https://package-search.services.jetbrains.com/api/search/idea/fulltext" />
+    <property name="packagesearch.endpoint.url.suggest" value="https://package-search.services.jetbrains.com/api/search/idea/suggest" />
+    <property name="packagesearch.status.updated.ts" value="1605171192893" />
+    <property name="project.wizard.group" value="PYTHON_MODULE" />
+    <property name="scala.last.updated" value="1605286984337" />
+    <property name="seenTips" value="neue-InsertLiveTemplate.html,neue-RecentFiles.html,neue-Switcher.html,neue-Compare.html,neue-PrintKeywords.html,neue-CodeCompletionInSearch.html,neue-ContextActions.html,neue-TabInLookups.html,neue-JupyterAddCell.html,neue-LiveTemplates.html,neue-IntroduceVariableIncompleteCode.html,neue-FinishBySmartEnter.html,neue-recent-locations.html,neue-QuickJavaDocInLookups.html,neue-MultiselectionWords.html,neue-DiagramShowPopup.html,neue-QuickSwitchScheme.html,neue-db_tip_drag_csv_file_to_create_table.html,neue-ExternalJavaDoc.html,neue-DiagramShowDiff.html,neue-IntroduceVariable.html,neue-CheckRegExp.html,neue-EditRegExp.html,neue-CamelHumpsInCodeCompletion.html,neue-SpringGotoRelated.html,neue-DiagramShow.html,neue-db_tip_forget_cached_schemas.html,neue-Escape.html,neue-CommentCode.html,neue-BreakpointSpeedmenu.html,neue-ExcludeFromProject.html,neue-JupyterExecuteCurrentSelectNext.html,neue-DeleteLine.html,neue-RecentSearch.html" />
+    <property name="selected.color.option.type" value="Scala For statement value" />
+    <property name="settings.code.style.selected.tab.JAVA" value="Imports" />
+    <property name="settings.code.style.selected.tab.Oracle" value="Expressions" />
+    <property name="settings.code.style.selected.tab.Scala" value="ScalaDoc" />
+    <property name="shared.index.infrastructure.prop" value="4" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
+    <property name="ts.lib.d.ts.version" value="3.9.5" />
+    <property name="typescript.show.auto.import" value="true" />
+  </component>
+  <component name="PyTestFrameworkService">
+    <option name="SDK_TO_PYTEST">
+      <map>
+        <entry key="$USER_HOME$/Desktop/air/eagle/it-tests/venv/bin/python3" value="true" />
+      </map>
+    </option>
+  </component>
+</application>

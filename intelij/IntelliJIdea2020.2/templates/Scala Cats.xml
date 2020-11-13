@@ -1,0 +1,16 @@
+<templateSet group="Scala Cats">
+  <template name="classf" value="class $NAME$[F[_]]($PARAMS$)$END$" description="Class effect type" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+  <template name="deff" value="def $NAME$($PARAM$):F[Unit] = $END$" description="Method with return type of F[Unit]" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+</templateSet>

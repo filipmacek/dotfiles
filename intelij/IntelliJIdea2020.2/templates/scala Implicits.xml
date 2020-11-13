@@ -1,0 +1,27 @@
+<templateSet group="scala Implicits">
+  <template name="implicitcontextshiftglobal" value="implicit val cs:cats.effect.ContextShift[cats.effect.IO] = cats.effect.IO.contextShift(scala.concurrent.ExecutionContext.global)" description="Implicit Context Shift for ExecutionContext global" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+  <template name="implicittimerglobal" value="implicit val timer = cats.effect.IO.timer(ExecutionContext.global)" description="Implicit Timer for ExecutionContext global" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+  <template name="implicitExecutionContext" value="implicit val ec: scala.concurrent.ExecutionContext = ExecutionContext.global" description="Implicit Global Execution context" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+  <template name="implicitLoger" value="implicit val logger: io.chrisdavenport.log4cats.Logger[IO] = io.chrisdavenport.log4cats.slf4j.Slf4jLogger.getLogger[IO]&#10;" description="Implicit IO Logger" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+  <template name="implicitConcurrentEffect" value="implicit val ce: ConcurrentEffect[IO] = IO.ioConcurrentEffect(cs)&#10;" description="Implicit Concurrent Effect" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+</templateSet>
