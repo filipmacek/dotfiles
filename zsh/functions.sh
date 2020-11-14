@@ -6,6 +6,10 @@ mem() {
     pmap $(pgrep $1 -n) | gawk '/total/ { a=strtonum($2); b=int(a/1024); printf b"MB" };'
 }
 
-helm_delete_deployed(){
+du_sort_path(){
+    input=$1
+    echo "INPUT $input"
+    command=$(du -hs "$1"/* | sort -h)
+    echo $command
     
 }
