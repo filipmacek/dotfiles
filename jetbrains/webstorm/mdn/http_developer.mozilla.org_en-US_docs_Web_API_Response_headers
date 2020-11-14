@@ -1,0 +1,1 @@
+The <code><strong>headers</strong></code> read-only property of the <a href="/en-US/docs/Web/API/Response"><code>Response</code></a> interface contains the <a href="/en-US/docs/Web/API/Headers"><code>Headers</code></a> object associated with the response.

@@ -1,0 +1,1 @@
+The <code><strong>PaymentRequestUpdateEvent</strong></code> interface is used for events sent to a <a href="/en-US/docs/Web/API/PaymentRequest"><code>PaymentRequest</code></a> instance when changes are made to shipping-related information for a pending <a href="/en-US/docs/Web/API/PaymentRequest"><code>PaymentRequest</code></a>. Those events are:

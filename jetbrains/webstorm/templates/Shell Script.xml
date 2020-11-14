@@ -1,0 +1,7 @@
+<templateSet group="Shell Script">
+  <template name="bash" value="#!/usr/bin/env bash" description="Insert Bash run" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SHELL_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

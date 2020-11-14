@@ -1,0 +1,13 @@
+<templateSet group="JavaScript">
+  <template name="jao" value="print(&quot;bokic&quot;)" description="Jao jao" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cl" description="Console log" value="console.log("$TS_1$")">
+    <variable name="TS_1" defaultValue="" alwaysStopAt="true" />
+    <context >
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

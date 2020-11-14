@@ -1,0 +1,1 @@
+An <a href="/en-US/docs/Web/API/EventListener"><code>EventListener</code></a> property called whenever an event of type <code>statechange</code> is fired; it is basically fired anytime the <a href="/en-US/docs/Web/API/ServiceWorker/state"><code>ServiceWorker.state</code></a> changes.

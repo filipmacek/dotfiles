@@ -1,0 +1,14 @@
+<templateSet group="unisnips-python">
+  <template name="if" value="if ($TS_1$) {&#10; $SELECTION$&#10;}" description="if(true)..(visual)" toReformat="false" toShortenFQNames="false">
+    <variable name="TS_1" expression="" defaultValue="true" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="main" value="if __name__ == '__main__':&#10; $TS_0$" description="main" toReformat="false" toShortenFQNames="false">
+    <variable name="TS_0" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

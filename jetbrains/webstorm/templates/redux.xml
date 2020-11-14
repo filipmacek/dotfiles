@@ -1,0 +1,18 @@
+<templateSet group="redux">
+  <template name="action-type" value="$NAME$ = &quot;@@$FOLDER$/$NAME$&quot;" description="Create new enum action type" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FOLDER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="action" value="export const $NAME$ = ($PARAM$: $TYPE$) =&gt; action($ACTION_TYPE$,$PARAM$)" description="Create action creator" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ACTION_TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+</templateSet>

@@ -1,0 +1,1 @@
+The <code><strong>navigator.sendBeacon()</strong></code> method <a href="/en-US/docs/Glossary/Asynchronous">asynchronously</a> sends a small amount of data over <a href="/en-US/docs/Glossary/HTTP">HTTP</a> to a web server.

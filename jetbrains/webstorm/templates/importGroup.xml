@@ -1,0 +1,12 @@
+<templateSet group="importGroup">
+  <template name="importduration" value="import scala.concurrent.duration._    " description="Import scala concurrent duration _" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+  <template name="importex" value="import scala.concurrent.ExecutionContext" description="Import Execution Context" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+</templateSet>

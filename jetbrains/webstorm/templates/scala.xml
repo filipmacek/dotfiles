@@ -1,0 +1,28 @@
+<templateSet group="scala">
+  <template name="Proba" value="println(&quot;PROBA&quot;)" description="Print Proba" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="SCALA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="log" value="_ &lt;- logger.info(&quot;$INFO$&quot;)" description="IO Cats Logger Info" toReformat="false" toShortenFQNames="true">
+    <variable name="INFO" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+  <template name="val" value="val $1$ = $END$" description="Val simpler" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+  <template name="def" value="def $name$($params$):$type$ = {&#10;    $end$    &#10;}" description="Def boilerplate" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="params" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+</templateSet>

@@ -1,0 +1,1 @@
+The <strong><code>Window.location</code></strong> read-only property returns a <a href="/en-US/docs/Web/API/Location"><code>Location</code></a> object with information about the current location of the document.

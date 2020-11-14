@@ -1,0 +1,301 @@
+sbtVersiobn
+-. . -..- - / . -. - .-. -.--
+version
+-. . -..- - / . -. - .-. -.--
+sbtVersion
+-. . -..- - / . -. - .-. -.--
+runMain
+-. . -..- - / . -. - .-. -.--
+runMain~
+-. . -..- - / . -. - .-. -.--
+compile
+-. . -..- - / . -. - .-. -.--
+run
+-. . -..- - / . -. - .-. -.--
+dsa
+-. . -..- - / . -. - .-. -.--
+import scala.util.random
+-. . -..- - / . -. - .-. -.--
+random
+-. . -..- - / . -. - .-. -.--
+quit
+-. . -..- - / . -. - .-. -.--
+exit
+-. . -..- - / . -. - .-. -.--
+:q
+-. . -..- - / . -. - .-. -.--
+import scala.util.Random
+-. . -..- - / . -. - .-. -.--
+val random = new Random
+-. . -..- - / . -. - .-. -.--
+random.nextLong
+-. . -..- - / . -. - .-. -.--
+import org.scalacheck.Prop.forAll
+-. . -..- - / . -. - .-. -.--
+import org.scalacheck.Prop
+-. . -..- - / . -. - .-. -.--
+console test
+-. . -..- - / . -. - .-. -.--
+console 
+-. . -..- - / . -. - .-. -.--
+test
+-. . -..- - / . -. - .-. -.--
+console
+-. . -..- - / . -. - .-. -.--
+scala.util.Random.nextDouble()
+-. . -..- - / . -. - .-. -.--
+compile:launchAmmoniteRepl
+-. . -..- - / . -. - .-. -.--
+launchAmmoniteRepl
+-. . -..- - / . -. - .-. -.--
+bloopInstall
+-. . -..- - / . -. - .-. -.--
+reload plugins
+-. . -..- - / . -. - .-. -.--
+program
+-. . -..- - / . -. - .-. -.--
+2+2
+-. . -..- - / . -. - .-. -.--
+import cats.effect.{Concurrent, IO, Timer}
+import cats.effect.concurrent.Semaphore
+import cats.syntax.all._
+
+import scala.concurrent.{ExecutionContext, future}
+import scala.concurrent.duration._
+
+// Needed for getting a Concurrent[IO] instance
+implicit val ctx = IO.contextShift(ExecutionContext.global)
+// Needed for `sleep`
+implicit val timer = IO.timer(ExecutionContext.global)
+
+
+class PreciousResource[F[_]](name:String, s:Semaphore[F])(
+  implicit F:Concurrent[F],timer:Timer[F]) {
+
+  def use:F[Unit] =
+    for {
+      x <- s.available
+      _ <- F.delay(println(s"$name >> Availability: $x"))
+      _ <- s.acquire
+      y <- s.available
+      _ <- F.delay(println(s"$name >> Availability: $y"))
+      _ <- timer.sleep(3.seconds)
+      _ <- s.release
+      z <- s.available
+      _ <- F.delay(println(s"$name >> Availability: $y"))
+    } yield()
+}
+
+
+val program:IO[Unit] =
+  for {
+    s <-Semaphore[IO](1)
+    r1 = new PreciousResource[IO]("R1",s)
+    r2 = new PreciousResource[IO]("R2",s)
+    r3 = new PreciousResource[IO]("R3",s)
+    _ <- List(r1.use,r2.use,r3.use).parSequence.void
+  } yield()
+program.unsafeRunSync()
+
+
+-. . -..- - / . -. - .-. -.--
+ls
+-. . -..- - / . -. - .-. -.--
+import cats.effect.{Concurrent, IO, Timer}
+import cats.effect.concurrent.Semaphore
+import cats.syntax.all._
+
+import scala.concurrent.{ExecutionContext, future}
+import scala.concurrent.duration._
+
+// Needed for getting a Concurrent[IO] instance
+implicit val ctx = IO.contextShift(ExecutionContext.global)
+// Needed for `sleep`
+implicit val timer = IO.timer(ExecutionContext.global)
+
+
+class PreciousResource[F[_]](name:String, s:Semaphore[F])(
+  implicit F:Concurrent[F],timer:Timer[F]) {
+
+  def use:F[Unit] =
+    for {
+      x <- s.available
+      _ <- F.delay(println(s"$name >> Availability: $x"))
+      _ <- s.acquire
+      y <- s.available
+      _ <- F.delay(println(s"$name >> Started | Availability: $y"))
+      _ <- timer.sleep(3.seconds)
+      _ <- s.release
+      z <- s.available
+      _ <- F.delay(println(s"$name >> Done |Availability: $y"))
+    } yield()
+}
+
+
+val program:IO[Unit] =
+  for {
+    s <-Semaphore[IO](1)
+    r1 = new PreciousResource[IO]("R1",s)
+    r2 = new PreciousResource[IO]("R2",s)
+    r3 = new PreciousResource[IO]("R3",s)
+    _ <- List(r1.use,r2.use,r3.use).parSequence.void
+  } yield()
+program.unsafeRunSync()
+
+-. . -..- - / . -. - .-. -.--
+import cats.effect.{Concurrent, IO, Timer}
+import cats.effect.concurrent.Semaphore
+import cats.syntax.all._
+
+import scala.concurrent.{ExecutionContext, future}
+import scala.concurrent.duration._
+
+// Needed for getting a Concurrent[IO] instance
+implicit val ctx = IO.contextShift(ExecutionContext.global)
+// Needed for `sleep`
+implicit val timer = IO.timer(ExecutionContext.global)
+
+
+class PreciousResource[F[_]](name:String, s:Semaphore[F])(
+  implicit F:Concurrent[F],timer:Timer[F]) {
+
+  def use:F[Unit] =
+    for {
+      x <- s.available
+      _ <- F.delay(println(s"$name >> Availability: $x"))
+      _ <- s.acquire
+      y <- s.available
+      _ <- F.delay(println(s"$name >> Started | Availability: $y"))
+      _ <- timer.sleep(3.seconds)
+      _ <- s.release
+      z <- s.available
+      _ <- F.delay(println(s"$name >> Done |Availability: $y"))
+    } yield()
+}
+
+
+val program:IO[Unit] =
+  for {
+    s <-Semaphore[IO](1)
+    r1 = new PreciousResource[IO]("R1",s)
+    r2 = new PreciousResource[IO]("R2",s)
+    r3 = new PreciousResource[IO]("R3",s)
+    _ <- List(r1.use,r2.use,r3.use).parSequence.void
+  } yield()
+program.unsafeRunSync()
+
+
+-. . -..- - / . -. - .-. -.--
+program.unsafeRunSync()
+-. . -..- - / . -. - .-. -.--
+package io.filipmacek.eagle.util
+
+import java.security.spec.{ECGenParameterSpec, RSAKeyGenParameterSpec}
+import java.security.{KeyPair, KeyPairGenerator, SecureRandom}
+
+import cats.effect.IO
+import io.chrisdavenport.log4cats.Logger
+import org.bouncycastle.jce.provider.BouncyCastleProvider
+
+object KeyUtils {
+  implicit val logger: Logger[IO] = io.chrisdavenport.log4cats.slf4j.Slf4jLogger.getLogger[IO]
+
+  def insertProvider(): BouncyCastleProvider = {
+    import java.security.Security
+    val provider = new BouncyCastleProvider()
+    val ret      = Security.insertProviderAt(provider, 1)
+    provider
+  }
+  val provider: BouncyCastleProvider = insertProvider()
+  val ECDSA                          = "ECDsA"
+  val RSA                            = "RSA"
+  private val secureRandom: SecureRandom = try {
+    SecureRandom.getInstance("NativePRNGNonBlocking")
+  } catch {
+    case _: Throwable => SecureRandom.getInstanceStrong
+  }
+  private val secp256k = "secp256k1"
+  val DefaultSignFunc  = "SHA512withECDSA"
+
+  def makeKeyPair(keySize: Int = 4096): KeyPair = {
+    val keyGen: KeyPairGenerator = KeyPairGenerator.getInstance(RSA, provider)
+    keyGen.initialize(keySize)
+    keyGen.generateKeyPair()
+  }
+
+}
+
+-. . -..- - / . -. - .-. -.--
+
+import java.security.spec.{ECGenParameterSpec, RSAKeyGenParameterSpec}
+import java.security.{KeyPair, KeyPairGenerator, SecureRandom}
+
+import cats.effect.IO
+import io.chrisdavenport.log4cats.Logger
+import org.bouncycastle.jce.provider.BouncyCastleProvider
+
+object KeyUtils {
+  implicit val logger: Logger[IO] = io.chrisdavenport.log4cats.slf4j.Slf4jLogger.getLogger[IO]
+
+  def insertProvider(): BouncyCastleProvider = {
+    import java.security.Security
+    val provider = new BouncyCastleProvider()
+    val ret      = Security.insertProviderAt(provider, 1)
+    provider
+  }
+  val provider: BouncyCastleProvider = insertProvider()
+  val ECDSA                          = "ECDsA"
+  val RSA                            = "RSA"
+  private val secureRandom: SecureRandom = try {
+    SecureRandom.getInstance("NativePRNGNonBlocking")
+  } catch {
+    case _: Throwable => SecureRandom.getInstanceStrong
+  }
+  private val secp256k = "secp256k1"
+  val DefaultSignFunc  = "SHA512withECDSA"
+
+  def makeKeyPair(keySize: Int = 4096): KeyPair = {
+    val keyGen: KeyPairGenerator = KeyPairGenerator.getInstance(RSA, provider)
+    keyGen.initialize(keySize)
+    keyGen.generateKeyPair()
+  }
+
+}
+
+-. . -..- - / . -. - .-. -.--
+KeyUtils
+-. . -..- - / . -. - .-. -.--
+KeyUtils.makeKeyPair
+-. . -..- - / . -. - .-. -.--
+KeyUtils.makeKeyPair()
+-. . -..- - / . -. - .-. -.--
+KeyUtils.makeKeyPair(123)
+-. . -..- - / . -. - .-. -.--
+
+object KeyUtils {
+  implicit val logger: Logger[IO] = io.chrisdavenport.log4cats.slf4j.Slf4jLogger.getLogger[IO]
+
+  def insertProvider(): BouncyCastleProvider = {
+    import java.security.Security
+    val provider = new BouncyCastleProvider()
+    val ret      = Security.insertProviderAt(provider, 1)
+    provider
+  }
+  val provider: BouncyCastleProvider = insertProvider()
+  val ECDSA                          = "ECDsA"
+  val RSA                            = "RSA"
+  private val secureRandom: SecureRandom = try {
+    SecureRandom.getInstance("NativePRNGNonBlocking")
+  } catch {
+    case _: Throwable => SecureRandom.getInstanceStrong
+  }
+  private val secp256k = "secp256k1"
+  val DefaultSignFunc  = "SHA512withECDSA"
+
+  def makeKeyPair(keySize: Int = 4096): KeyPair = {
+    val keyGen: KeyPairGenerator = KeyPairGenerator.getInstance(RSA, provider)
+    keyGen.initialize(keySize)
+    keyGen.generateKeyPair()
+  }
+
+}

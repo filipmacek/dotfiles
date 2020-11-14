@@ -1,0 +1,15 @@
+<templateSet group="scalaTest">
+  <template name="test" value="&quot;$1$&quot; - {&#10;  &quot;$2$&quot; in {&#10;    $END$&#10;  }    &#10;}" description="Outer test boilerplate for AnyFreeSpec" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+  <template name="testin" value="&quot;$1$&quot; in {&#10;    $END$   &#10;}" description="Inner test boilerplate for AnyFreeSpec" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+</templateSet>

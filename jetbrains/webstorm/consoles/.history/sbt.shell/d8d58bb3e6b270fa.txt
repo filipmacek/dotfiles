@@ -1,0 +1,57 @@
+sbtVersiobn
+-. . -..- - / . -. - .-. -.--
+version
+-. . -..- - / . -. - .-. -.--
+sbtVersion
+-. . -..- - / . -. - .-. -.--
+runMain
+-. . -..- - / . -. - .-. -.--
+runMain~
+-. . -..- - / . -. - .-. -.--
+compile
+-. . -..- - / . -. - .-. -.--
+run
+-. . -..- - / . -. - .-. -.--
+dsa
+-. . -..- - / . -. - .-. -.--
+import scala.util.random
+-. . -..- - / . -. - .-. -.--
+random
+-. . -..- - / . -. - .-. -.--
+quit
+-. . -..- - / . -. - .-. -.--
+exit
+-. . -..- - / . -. - .-. -.--
+:q
+-. . -..- - / . -. - .-. -.--
+import scala.util.Random
+-. . -..- - / . -. - .-. -.--
+val random = new Random
+-. . -..- - / . -. - .-. -.--
+random.nextLong
+-. . -..- - / . -. - .-. -.--
+import org.scalacheck.Prop.forAll
+-. . -..- - / . -. - .-. -.--
+import org.scalacheck.Prop
+-. . -..- - / . -. - .-. -.--
+console test
+-. . -..- - / . -. - .-. -.--
+console 
+-. . -..- - / . -. - .-. -.--
+test
+-. . -..- - / . -. - .-. -.--
+console
+-. . -..- - / . -. - .-. -.--
+scala.util.Random.nextDouble()
+-. . -..- - / . -. - .-. -.--
+compile:launchAmmoniteRepl
+-. . -..- - / . -. - .-. -.--
+launchAmmoniteRepl
+-. . -..- - / . -. - .-. -.--
+bloopInstall
+-. . -..- - / . -. - .-. -.--
+reload plugins
+-. . -..- - / . -. - .-. -.--
+plugins reload
+-. . -..- - / . -. - .-. -.--
+plugins reload;

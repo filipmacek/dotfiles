@@ -1,0 +1,1 @@
+The <strong><code>register()</code></strong> method of the <a href="/en-US/docs/Web/API/ServiceWorkerContainer"><code>ServiceWorkerContainer</code></a> interface creates or updates a <a href="/en-US/docs/Web/API/ServiceWorkerRegistration"><code>ServiceWorkerRegistration</code></a> for the given <code>scriptURL</code>.

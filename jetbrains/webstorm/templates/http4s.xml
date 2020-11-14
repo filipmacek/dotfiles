@@ -1,0 +1,9 @@
+<templateSet group="http4s">
+  <template name="endpoint" value="private def $NAME$($PARAM$):HttpRoutes[F]=  HttpRoutes.of[F] {&#10;    $END$&#10;}" description="Http4s Routes Endpoint" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SCALA" value="true" />
+    </context>
+  </template>
+</templateSet>

@@ -1,0 +1,2 @@
+com.tabnine.TabNine
+net.vektah.codeglance

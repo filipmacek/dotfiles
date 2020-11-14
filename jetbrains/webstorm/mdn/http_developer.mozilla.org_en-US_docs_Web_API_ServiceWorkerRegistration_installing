@@ -1,0 +1,1 @@
+The <strong><code>installing</code></strong> property of the <a href="/en-US/docs/Web/API/ServiceWorkerRegistration"><code>ServiceWorkerRegistration</code></a> interface returns a service worker whose <a href="/en-US/docs/Web/API/ServiceWorker/state"><code>ServiceWorker.state</code></a> is <code>installing</code>. This property is initially set to <code>null</code>.

@@ -1,0 +1,5 @@
+<application>
+  <component name="IntentionManagerSettings">
+    <ignoreAction name="Scala/Argument Conversion/Convert to argument in parentheses" />
+  </component>
+</application>
