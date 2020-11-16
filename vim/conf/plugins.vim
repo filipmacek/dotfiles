@@ -74,7 +74,6 @@ Plug 'rhysd/vim-grammarous'
 
 " Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
-Plug 'Valloric/YouCompleteMe',{'do':'./install.py'}
 
 Plug 'simeji/winresizer'
 

@@ -22,6 +22,8 @@
 # alias md-to-pdf="pandoc --variable urlcolor=cyan kubecluster.md --pdf-engine wkhtmltopdf -o"
 # Load functions
 source $HOME/dotfiles/zsh/functions.sh
+source $HOME/dotfiles/zsh/prompt.sh
+
 
 # Settings
 	export VISUAL=vim
@@ -115,7 +117,6 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
 fi
 
 
-source ~/dotfiles/zsh/prompt.sh
 
 # PATH
 # GO bin files
@@ -133,6 +134,9 @@ export PATH=$PATH:/opt/kotlin-native-linux-1.3.72/bin
 # Fzf
 [ -f ~/dotfiles/zsh/.fzf.zsh ] && source ~/dotfiles/zsh/.fzf.zsh
 
+
+# SOURCE THEME
+# source ~/dotfiles/zsh/plugins/powerlevel9k/powerlevel9k.zsh-theme
 
 autoload -U compinit && compinit
 
